@@ -1,0 +1,19 @@
+- History: Docker vs ContainerD:
+  - K8s built to maange DOkcer firstly
+  - Container Runtime Interface CRI --> to handle other container runtime
+  - CRI --> Open Container Initiative (OCI) :
+    - imagespec
+    - runtimespec
+  - But docker don't commit to CRI as it was invented before it --> DockerShim
+  - Dokcer is a set of tools (Columes,CLI, Auth, COntaineD)
+  - ContainerD comply with CRI
+  - in K8s c1.24 support for dockershim is removed
+  - ContainerD:
+    - Comes with ctr --> not very user friendly and only support limited features --> used for debugging only
+      - ctr images pull
+    - nerdctl --> docker-like CLI ,supports docker-compose
+      - nerdctl run --name name image: tag -p port:port
+    - crictl --> cli for CRI compiatble container runtimes like rkt and containerd
+      - not ideally to create containers ,mainly for some deubgging
+      - works with kubelet so eventaully kubelet would delete containers created using crictl out of its knowledge (danger)
+      - beside some listing images and containers commands ,can also ls pods 
