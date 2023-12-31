@@ -28,7 +28,7 @@ spec:
 
 - ReplicaSet Yaml
 ```
-apiVersion: v1
+apiVersion: apps/v1
 kind: RepliacationController
 metadata:
     name: rc
@@ -54,3 +54,4 @@ spec:
   - k scale --replicas 3 rc_name
   - k scale --replicas 3 rc_name_definition.yaml
   - Could also scale based on loads(danger)
+- If I cahnged the ReplicaSet contianer image in its definition file and applied it ,(Surprise) it won't automatically delete the existing pods and recreate with the new image you have to either recreate the ReplicaSet or delete the pods
