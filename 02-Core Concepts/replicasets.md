@@ -29,7 +29,7 @@ spec:
 - ReplicaSet Yaml
 ```
 apiVersion: apps/v1
-kind: RepliacationController
+kind: RepliacaSet
 metadata:
     name: rc
     labels:
