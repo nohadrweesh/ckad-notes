@@ -1,0 +1,25 @@
+- Build custom images:
+  - Choose base image
+  - Install dependencies
+  - copy code
+  - run app
+- Layered architecture 
+  - each layer with different size
+  - docker history image_name
+- Containers meant to run specific tasks not to host OS
+- Commands
+  - CMD sleep 5 or CMD ["sleep","5"]
+  - Override whole command
+    - docker run ubuntu-sleeper sleep 10
+- Entrypoint
+  - Entrypoint ["sleep"]
+  - Override Entrypoint
+    - docker run ubuntu-sleeper 10 # without sleep
+    - docker run ubuntu-sleeper  # wll cause error because no default value for sleep command
+- Combine both CMD & Entrypoint
+  - Entrypoint ["sleep"] 
+  - CMD  ["5"]
+  - docker run ubuntu-sleeper # sleep 5
+  - docker run ubuntu-sleeper 20 # sleep 20
+- Override Entrypoint
+  - docker run ubuntu-sleeper --entrypoint sleep-0.2  33 # will run sleep-0.2 33
