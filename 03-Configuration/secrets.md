@@ -94,5 +94,9 @@ data:
   - Kubelet writes secrets to temp files instead of disk storage
   - Once pod is deleted related secret is deleted
   - 
-        
+## Encryption at rest
+- etcd-client --> etcd command this is a client to get info from the etcd server (pod running)
+- by viewing the secrets by etcd command , you'll see it's not encrypted
+- By creating EcryptionConfiguration we're encrypting secrets at rest
+- in  EcryptionConfiguration Object ,we need to use different provider other than identity ,identity means no Envryption       
     
