@@ -1,0 +1,2 @@
+- in linux to get the running user `whoami`
+- to get live changes of a command --watch `k get pods --watch`
