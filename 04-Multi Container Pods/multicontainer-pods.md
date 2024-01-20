@@ -1,0 +1,5 @@
+- Multicontainer pods share smae lifecycycle (create & destroy together), share same network space (can refer to each other as localhost), smae volumes
+- MultiContainer Patterns:
+  - Sidecar (Log Agent) --> collects logs and sends to Log server
+  - Adapter (Different Log formats) --> change logs formats to be unified
+  - Amabassdor (Different DBs) --> so code will refer to it as DB and the ambassdor will procy request to DEV/Prod DB
