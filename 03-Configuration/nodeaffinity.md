@@ -38,3 +38,6 @@ we can see something like
 - planned:
   - requiredDuringSchedulingRequiredDuringExecution
 - During Excution menas if pod is created and is running but the node label is removed what will happen to the pod , will it continue or it will be evivted
+
+
+- Combine taints&tolerations with node affinity to both place pods on required nodes and don't place no-needed pods on these nodes
