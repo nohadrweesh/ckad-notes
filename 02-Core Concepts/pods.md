@@ -36,3 +36,5 @@
 
 
 - k run nginx --image nginx --labels="app=front,env=prod" --port 8080 --expose=true # creates clusterip svc and relate it to the pod
+
+- To describe all pods : k describe pod
