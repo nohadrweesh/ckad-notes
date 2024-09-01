@@ -1,4 +1,4 @@
-- Scheduler checks the availble nodes and chosses one with sufficient cpu and mem , if no node has sufficient cpu and mem, pod will continue in Pending state
+- Scheduler checks the available nodes and chosses one with sufficient cpu and mem, if no node has sufficient cpu and mem, pod will continue in Pending state
 
 ```
         apiVersion: v1
@@ -22,9 +22,9 @@
 
 ```                  
 - if container tries to use more cpu than its limit --> it will be throtteled (continue with its limit)
-- if container tries to use more mem than its limit --> it will be killed with OOm (out Of mem)
+- if container tries to use more mem than its limit --> it will be killed with OOM (out Of mem)
 - If pod has mem and needs more than its limit , we need to kill it to retrieve the mem assigned
-- Setting Requests,No LIMITS is best for real case scanarios
+- Setting Requests, No LIMITS is best for real case scanarios
 
 ## LimitRange
 - at namespace level
@@ -67,7 +67,7 @@ spec:
 ```
 
 - LimitRange only affect newly created pods
-- If I have limitRange for deaultLimit 100m and I try to create pod with request set to 500m and no limit is set --> will cause issue ,why?
+- If I have limitRange for defaultLimit 100m and I try to create pod with request set to 700m and no limit is set --> will cause issue ,why?
 - Because by default limit is set to 100m is per the limitRange BUT this is less than the request so it will fail with error `is invalid: spec.containers[0].resources.requests: Invalid value: "700m": must be less than or equal to cpu limit`
 
 ## ResourceQuota

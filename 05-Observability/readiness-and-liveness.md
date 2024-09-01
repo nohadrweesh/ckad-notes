@@ -1,14 +1,14 @@
 ## Readiness Probe
 - Pod Status (Pending -> Creating -> Running -> Terminated)
-- Pod COnditions --> complemetns Status , array of true and false
+- Pod Conditions --> complemetns Status , array of true and false
   - PodScheduled
   - Initialized
   - ContainerReady
   - Ready
-- Once application is marked ready --> it will recive traffic
-- App may need some more time to be ready to revive traffic not just it started
+- Once application is marked ready --> it will receive traffic
+- App may need some more time to be ready to receive traffic not just it started
 - So we need to tie the Ready condition with the actual state of the app
-- TYpes:
+- Types:
   - HTTP test
   - TCP test
   - EXEC command

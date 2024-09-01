@@ -8,7 +8,7 @@ metadata;
     name:ubuntu-sleeper-pod
 spec:
     container:
-        - name: ubunru
+        - name: ubuntu
           image: ubuntu
           args: ["10"]
 ```
@@ -20,7 +20,7 @@ metadata;
     name:ubuntu-sleeper-pod
 spec:
     container:
-        - name: ubunru
+        - name: ubuntu
           image: ubuntu
           command: ["sleep-0.2"]
           args: ["10"]

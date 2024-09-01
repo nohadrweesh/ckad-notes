@@ -28,7 +28,7 @@ we can see something like
 ```
  matchLabels:
     - key: size
-        operator: exists
+      operator: exists
 ```
 
 - So for affinity types we have 2 available and 1 planned, 
@@ -37,7 +37,7 @@ we can see something like
   - preferredDuringSchedulingIgnoredDuringExecution
 - planned:
   - requiredDuringSchedulingRequiredDuringExecution
-- During Excution menas if pod is created and is running but the node label is removed what will happen to the pod , will it continue or it will be evivted
+- During Excution menas if pod is created and is running but the node label is removed what will happen to the pod , will it continue or it will be evicted
 
 
 - Combine taints&tolerations with node affinity to both place pods on required nodes and don't place no-needed pods on these nodes

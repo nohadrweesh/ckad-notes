@@ -86,17 +86,17 @@ data:
     ```
 - Secrets are encoded NOT encrypted --> don't push to SCM
 - EVEN in etcd secrets are not encrypted --> Enable encryption at rest
-- In same namespace any pod can use the secretds --> COnfigure RBAC for least privilage access to secrets
+- In same namespace any pod can use the secrets --> Configure RBAC for least privilage access to secrets
 - Configure third-party secrets store providers like AWS,Vault
 - Secrets are not safe but are a safer option
 - It's not secrets that are safe it's the practices around it:
   - Secrets are sent to nodes with pods use this secret
   - Kubelet writes secrets to temp files instead of disk storage
   - Once pod is deleted related secret is deleted
-  - 
+  
 ## Encryption at rest
 - etcd-client --> etcd command this is a client to get info from the etcd server (pod running)
 - by viewing the secrets by etcd command , you'll see it's not encrypted
 - By creating EcryptionConfiguration we're encrypting secrets at rest
-- in  EcryptionConfiguration Object ,we need to use different provider other than identity ,identity means no Envryption       
+- in EcryptionConfiguration Object, we need to use different provider other than identity, identity means no Encryption       
     

@@ -2,7 +2,7 @@
 - K84 components:
   - ApiServer
   - etcd
-  - schueler
+  - scheduler
   - controller
   - container runtime 
   - Kubelet

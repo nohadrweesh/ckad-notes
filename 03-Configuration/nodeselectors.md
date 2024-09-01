@@ -1,4 +1,4 @@
-- Specify which node(or nodes )this pod will placed on
+- Specify which node(or nodes) this pod will placed on
 - First label the node
 - k label node node_name key_name=key_value
 - k label node node_name size=Large

@@ -1,5 +1,5 @@
-- Deployment includes replicaset thst includes pods
-- So Beside maintaining the num of pods that Replicaset provices , Deplpoyment provides the ability to upgrade/downgrade versions using many rolling techniques
+- Deployment includes replicaset that includes pods
+- So Beside maintaining the num of pods that Replicaset provices, Deplpoyment provides the ability to upgrade/downgrade versions using many rolling techniques
 - Same defintion file as replicaset
 
 ```

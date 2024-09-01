@@ -57,7 +57,7 @@ kubectl scale deployment nginx --replicas=4
 
 Another way to do this is to save the YAML definition to a file and modify
 
-kubectl create deployment nginx --image=nginx--dry-run=client -o yaml > nginx-deployment.yaml
+kubectl create deployment nginx --image=nginx --dry-run=client -o yaml > nginx-deployment.yaml
 
 
 

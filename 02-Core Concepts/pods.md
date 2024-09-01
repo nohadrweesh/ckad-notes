@@ -1,5 +1,5 @@
 - K8s assume your app is developed and containerized
-- Mostly 1 pod ~ 1 container unless you nedd some helper containers
+- Mostly 1 pod ~ 1 container unless you need some helper containers
 - K run pod_name --image image_name
 - k get pods
 - Yaml in K8s

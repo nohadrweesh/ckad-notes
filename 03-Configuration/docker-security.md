@@ -1,6 +1,6 @@
 - Containers isolated using namespaces
 - By default docker runs proccess as root user
-- THis can be changed either by setting USER 1000 in docker file or at running the image docker run --user=1000 nginx
-- root user in host is not root user in containers, docker implements this using capabiities
+- This can be changed either by setting USER 1000 in docker file or at running the image docker run --user=1000 nginx
+- root user in host is not root user in containers, docker implements this using capabilities
 - docker run --cap-add MAC_ADMIN or docker run --cap-drop MAC_ADMIN
-- To run with all capabilitries docker run --priviliged
+- To run with all capabilities docker run --priviliged

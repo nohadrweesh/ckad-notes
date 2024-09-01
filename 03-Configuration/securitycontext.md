@@ -1,4 +1,4 @@
-- securityCOntext at both pod level and container level
+- securityContext at both pod level and container level
 - container level overrides pod level
 - capabilities only supported at container level
 

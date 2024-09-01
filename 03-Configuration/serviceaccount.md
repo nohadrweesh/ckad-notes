@@ -1,4 +1,4 @@
-- User Account (humands) VS Service Account (apps)
+- User Account (humans) VS Service Account (apps)
 - SA by default creates token which used in authentication, this token is stored into a secret object
 - If the app is not deployed to K8S , we need to copy the token to authenicate
 - If the app is deployed to K8S then we need to mount the token only

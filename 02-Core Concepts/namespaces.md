@@ -19,6 +19,7 @@ metadata:
   - k config set-context $(k config current-context) --namespace=dev
 - k get pods --ns dev
 - k get pods --all-namespaces or k get pods -A
+
 - Resource Quota: Limit Resources in a namespace
 ```
 apiVersion: v1
@@ -33,6 +34,4 @@ spec:
         requests.memory: 4Gi
         limits.cpu: "14"
         limits.memory: 14Gi
-
-
 ```
