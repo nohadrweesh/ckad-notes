@@ -7,3 +7,4 @@
   - k get pods --no-headers | wc -l
 - List all objects
   - k get all
+- Standard Output of the pod container --> can be seen using logs command
