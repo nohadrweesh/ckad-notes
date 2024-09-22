@@ -27,3 +27,8 @@
   - now CHANGE-CAUSE is viewed when running --> k rollout history deployment/deploy_name
   - Change cause is added as annotation -> kubernetes.io/change-cause
 - Rollout --> is the process of creating containers in BE
+- maxUnavaible --> how many pods can be down in updating deployment
+- maxSurge --> how many pods can we go above nu of pods specified in replica
+  - For example: in a 4 pod deployment, wen we update we can only shut down 1(maxUnavaible) pod at a time and also can only have 4+1(num of pods+ maxSurge) pods at specific time 
+  - both could be percentage of absolutes num
+  - ensures thes balance between (need to update the app) and (keep the app availbe)

@@ -1,5 +1,9 @@
 # Services
 - it enables communication between differen svcs
+- It's an abstraction that defines a logical set of pods and a policy to access them
+- It enbale communication between different parts of the app in a stable way even if pods come and go
+- SVC endpoints: created by k8s when a svc created and it contains pods ips and ports (identified by selector) --> represent actual pods k8s routes to
+  - endpoints can be created manually --> if we need to route traffic to an ip address that is not part of pod selection
 - Example:
   - If I have a node in my computer and it has a running pod in it, how can I access the pod from my laptop?
   - I can't use the pod ip because it's an internal network ip (on the node)
