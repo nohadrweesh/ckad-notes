@@ -10,3 +10,4 @@
 - Standard Output of the pod container --> can be seen using logs command
 -  --all-namespaces == -A
 -  can't get or edit specific resource using -A (accros all namespaces), like k get ingress ingress_name -A -o yaml --> X error
+-  k replace --force -f resource.yaml
