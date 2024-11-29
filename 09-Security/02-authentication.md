@@ -11,10 +11,10 @@
   - Extenal Authentication Provider -> LDAP
 - Basic Auth Mechanism (passwords)
   - create file with user id, user name, user password and pass it the apiserver --basic-auth-file=users.csv
-  - then in aculr command pass this info `curl -v -k https://master-node-ip:6443/api/v1/pods -u "username:password"`
+  - then in a curl command pass this info `curl -v -k https://master-node-ip:6443/api/v1/pods -u "username:password"`
 - Basic Auth Mechanism (tokens)
   - create file with user id, user name, user token and pass it the apiserver --token-auth-file=users.csv
-  - then in aculr command pass this info `curl -v -k https://master-node-ip:6443/api/v1/pods -header "Authorization:Bearer token"`
+  - then in a curl command pass this info `curl -v -k https://master-node-ip:6443/api/v1/pods -header "Authorization:Bearer token"`
 - This is NOT the RECOMMENED method:
-  - Consider volunme mount while providing the auth file in kubeadm setup
+  - Consider volume mount while providing the auth file in kubeadm setup
   - Setup RBAC for new users

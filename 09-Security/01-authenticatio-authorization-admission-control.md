@@ -1,5 +1,5 @@
 # Secure hosts
-- phiscal secutiryty
+- physical security
 - Disable password auth 
 - allow only SSH key exchange auth
 
@@ -16,5 +16,5 @@
   - ABAC (Attribute based access control)
   - Node Authorization
   - Webhook Mode
-- TLS Certificates: All communication between kube-apiserver and other components like(etcd, scheduler, COntroller or node kublet and kube proxy) are encrypted
+- TLS Certificates: All communication between kube-apiserver and other components like(etcd, scheduler, Controller or node kublet and kube proxy) are encrypted
 - Network Policy: By default all pods can access each other but this can be resticted by NetPol

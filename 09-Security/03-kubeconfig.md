@@ -8,7 +8,7 @@
        --client-key admin.key
        --client-certificate admin.crt
        --certificate-auth
-- by default thr kubectl command looks for kubeconfig file in $HOME/.kube/config and if it exists you don't have to specify it in each command
+- by default the kubectl command looks for kubeconfig file in $HOME/.kube/config and if it exists you don't have to specify it in each command
 ```
        --server my-kube-playground:6443
        --client-key admin.key

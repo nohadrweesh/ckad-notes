@@ -6,7 +6,7 @@
 - [api (core),apis(named)] groups are for cluster functioanlity
 - Core group(api) is for all the core functionality like
   - pods,namespaces,rc,events,nodes,secrets
-- Named group(apis) is more organized and all newer features will be availble through it:
+- Named group(apis) is more organized and all newer features will be available through it:
 ├── /apps
 │   ├── /v1
 │   │   ├── /deployments
@@ -23,13 +23,13 @@
 
 - so apps, extentions, networking.k8s.io, authentication.k8s.io,certificates.k8s.io --> are api groups
 - deployments,replicasets,statefulsets --> are resources in this group
-- Each resource has a set of actions (create,list,get,delete,update,wathc)--> Verbs
+- Each resource has a set of actions (create,list,get,delete,update,watch)--> Verbs
 
 
 - To access thes apis on k8s server , I may face an authorization issue and probably can only view the version , need to pass the certificates in each api so I could be able to view/modify resources
 - Instead I can use kubectl proxy client
-- k proxy --> laucnhes a proxy service locally on port 8001 and uses creds and certifcates from kubeconfig file to access the cluster so Idn't have to sepcify them in curl command
-- So after that use curl localhost:8001 instead of curi localhost:6443
+- k proxy --> laucnhes a proxy service locally on port 8001 and uses creds and certifcates from kubeconfig file to access the cluster so I don't have to sepcify them in curl command
+- So after that use curl localhost:8001 instead of curl localhost:6443
 - So Process is User --> kubectl proxy --> kube apiserver
 - NOTE that kube Proxy !== Kubectl Proxy
 - KubeProxy--> enables connectivity between pods and services accorss different nodes in the cluster

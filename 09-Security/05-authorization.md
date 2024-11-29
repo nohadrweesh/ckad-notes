@@ -4,8 +4,8 @@
 
 ## Authorization Mechanisms
 - Node
-  - Both users and kublet access kube-apiserver to handle multiple operations (read,updata,.. resources) --> these requests are handled by special authorizer known as node authorizer
-  - kublet are part of systrem nodes groups and have named prefixed with system:node
+  - Both users and kublet access kube-apiserver to handle multiple operations (read,update,.. resources) --> these requests are handled by special authorizer known as node authorizer
+  - kublet are part of system nodes groups and have named prefixed with system:node
   - So any request coming from a system:node --> authorized using Node authorizer
 - ABAC (attribute based authorization)
   - For each user create a policy file with the allowed operation 
@@ -18,9 +18,9 @@
         apiGroup: *
     }
    }
-   - difficult to manage as any time need to add change to securoity need to edit this policy file manually
+   - difficult to manage as any time need to add change to security need to edit this policy file manually
 - RBAC (role based authorization)
-  - more standard approach to amnage access
+  - more standard approach to manage access
   - create role for each type(dev,admin)
   - assign users to this role
 - Webhook

@@ -5,7 +5,7 @@ apiVersion: rbac.authorization.k8s.io
 kind: Role
 metadata:
     name: developer
-    namespace: ## can specify it to limit access within spoecic namespace
+    namespace: ## can specify it to limit access within specific namespace
 rules:
 - apiGroups: [""] ## for core groups can leave it empty
   resources: ["pods"]
@@ -15,7 +15,7 @@ rules:
   verbs: ["create"]
 ```
 - for core groups can leave apiGroups blank
-- Aoosciate User to Role
+- Associate User to Role
 ```
 apiVersion: rbac.authorization.k8s.io
 kind: RoleBinding
@@ -38,7 +38,7 @@ roleRef:
   -  k auth can-i create deployment --as dev-user --namesapce test--> returns yes | no
 - Can also specify resourceNames in Role definition
 ```
-apiVersion: rbac.authorization.k8s.io
+apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
     name: developer
