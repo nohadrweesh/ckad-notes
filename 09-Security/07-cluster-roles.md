@@ -32,3 +32,8 @@ roleRef:
 - kubectl create clusterrole node-role  --verb=get,list,watch,create,update,delete --resource=nodes
 - kubectl create clusterrolebinding node-role  --clusterrole=node-role --user=michelle 
 - k auth can-i list nodes --as michelle
+
+
+- k api-resources ==? gets the resources names,api versions wether namespaced or not 
+- k create clusterrole storage-admin --resource=persistentvolumes,storageclasses --verb=*
+- k create clusterrolebinding michelle-storage-admin  --user=michelle --clusterrole=storage-admin
