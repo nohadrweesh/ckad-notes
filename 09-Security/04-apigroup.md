@@ -34,3 +34,9 @@
 - NOTE that kube Proxy !== Kubectl Proxy
 - KubeProxy--> enables connectivity between pods and services accorss different nodes in the cluster
 - Kubectl Proxy--> HTTP Proxy service created by kubectl utility to access kube-apiserver
+
+
+## Running proxy:
+- k proxy 8001& --> this connects to the k8s service in background 
+- now you can run commands like: curl localhost:8001/apis/authorization.k8s.io 
+  

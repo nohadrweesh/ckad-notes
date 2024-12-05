@@ -12,3 +12,4 @@
 -  can't get or edit specific resource using -A (accros all namespaces), like k get ingress ingress_name -A -o yaml --> X error
 -  k replace --force -f resource.yaml
 -  Volume names(and I believe all resourcs name) shouldn't contain CapitalCase chars but can contain -
+-  To make any update to api-server, don't edit the pod itself(won't be allowed as you can edit pod iamge and just little other info) --> update the manifest file (an remmber to tak a backup of it before that) /etc/kubernetes/manifests/kube-apiserver.yaml
