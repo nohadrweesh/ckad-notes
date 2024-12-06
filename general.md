@@ -13,3 +13,4 @@
 -  k replace --force -f resource.yaml
 -  Volume names(and I believe all resourcs name) shouldn't contain CapitalCase chars but can contain -
 -  To make any update to api-server, don't edit the pod itself(won't be allowed as you can edit pod iamge and just little other info) --> update the manifest file (an remmber to tak a backup of it before that) /etc/kubernetes/manifests/kube-apiserver.yaml
+-  know OS name run `cat /etc/*release*`
