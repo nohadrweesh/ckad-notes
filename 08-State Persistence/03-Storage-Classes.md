@@ -12,7 +12,7 @@ parameters:
     type: pd-standard |pd-ssd
     replication-type: none | regional-pd
 ```
-- Can add parameters section(optional can be omitted) (its attributes are unique foor each provsioner)
+- Can add parameters section(optional can be omitted) (its attributes are unique for each provsioner)
 - And in the PVC specify storageClassName
 ```
 apiVersion: v1

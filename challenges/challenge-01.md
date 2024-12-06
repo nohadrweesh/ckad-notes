@@ -1,0 +1,1 @@
+kubectl create role developer-role  --verb=*  --resource=persistentvolumeclaims,pods --namespace=development --dry-run=client -o yaml
