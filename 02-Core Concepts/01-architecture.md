@@ -1,5 +1,5 @@
 - Master VS Worker Nodes(minions)
-- K84 components:
+- K8s components:
   - ApiServer
   - etcd
   - scheduler
@@ -8,5 +8,5 @@
   - Kubelet
 - Kubectl
   - k run hello-minikube
-  - k cluster-infor
+  - k cluster-info
   - k get nodes

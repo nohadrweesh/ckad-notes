@@ -1,5 +1,5 @@
 - Deployment includes replicaset that includes pods
-- So Beside maintaining the num of pods that Replicaset provices, Deplpoyment provides the ability to upgrade/downgrade versions using many rolling techniques
+- So Beside maintaining the num of pods that Replicaset provides, Deployment provides the ability to upgrade/downgrade versions using many rolling techniques
 - Same defintion file as replicaset
 
 ```
@@ -26,3 +26,11 @@ spec:
 ```
 
 - k create deployment deployment_name --image image_name --replicas 3
+- could add strategy to the spec
+  """
+  startegy:
+    type: RollingUpdate
+    rollingUpdate:
+        maxUnavailable: 1
+        maxSurge: 2
+  """

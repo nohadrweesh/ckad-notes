@@ -5,7 +5,7 @@
     - imagespec
     - runtimespec
   - But docker don't commit to CRI as it was invented before it --> DockerShim
-  - Docker is a set of tools (Volumes, CLI, Auth, ContaineD)
+  - Docker is a set of tools (Volumes, CLI, Auth, ContainerD)
   - ContainerD comply with CRI
   - In K8s v1.24 support for dockershim is removed
   - ContainerD:

@@ -30,9 +30,9 @@
   - only the properties listed below are editable:
         - spec.containers[*].image
         - spec.initContainers[*].image
-        - spec.activeDeadlineSeconds
+        - spec.activeDeadlineSeconds ##Specifies the maximum duration (in seconds) that a Pod can run before it is forcibly terminated by the Kubernetes system
         - spec.tolerations
-        - spec.terminationGracePeriodSeconds
+        - spec.terminationGracePeriodSeconds  ##Specifies the amount of time (in seconds) Kubernetes waits after sending a termination signal (SIGTERM) to the container before forcefully killing it
 
 
 - k run nginx --image nginx --labels="app=front,env=prod" --port 8080 --expose=true # creates clusterip svc and relate it to the pod

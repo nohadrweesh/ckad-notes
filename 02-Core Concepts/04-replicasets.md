@@ -4,7 +4,7 @@
   - make sure the required num of pods always runs, even if any of them fails
 - Replication Controller (Older) VS ReplicaSet
 - ReplicaSet can manage pods that were not created as part of the replicaset creation 
-- So ReplicaSet has selector field mandatory but ReplicationController has it optional and it it doesn't exist it assumes this as the labels in pod
+- So ReplicaSet has selector field mandatory but ReplicationController has it optional and if it doesn't exist it assumes this as the labels in pod
 - ReplicationController Yaml
 ```
 apiVersion: v1
