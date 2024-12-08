@@ -83,3 +83,6 @@ in shell run this -->  nc -v -z -w 2 secure-service 80 -->
 - maxUnavailable --> how many pods can be down in updating deployment)
 - maxSurge --> how many pods can we go above num of pods specified in replica
 - Pod has restartPolicy set to Always by default
+- NetPol : -
+  - if I have multiple records in the `from` array --> it works as OR operation 
+  - in the from array `element`(like first one) whcih has pod and ns selctor it works as AND operation , both should be met

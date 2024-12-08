@@ -1,6 +1,6 @@
 ## ClusterIP
 - the default svc type
-- The svc create virtual IP inside the cluster to enable communication between differetn svc (like frontend and backend and db)
+- The svc create virtual IP inside the cluster to enable communication between different svc (like frontend and backend and db)
 
 ```
 apiVersion: v1

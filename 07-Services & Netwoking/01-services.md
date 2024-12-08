@@ -11,7 +11,7 @@
   - So using a service that expose the pod on specific port --> then we can access the pod on node_id:node_port
 
 ## NodePort
-- This is NodePort Service:makes the internal port accessible on a port in the node
+- This is NodePort Service:makes the internal pod accessible on a port in the node
 - It enable external access 
 - SVC is like a virtual server inside the node and it has its own ip address called the cluster ip of the svc
 - It includes 3 ports, named on the viewpoint of the svc:
@@ -39,7 +39,7 @@ spec:
 - After creating the service can use svc_ip:nodeport to access it
 - If the svc selects pods that are on different nodes in the cluster, k8s will creates a svc that spans different nodes and make it accessble on the same nodeport , so we can use node_$i_ip:svc_nodeport --> is accessable
 ## ClusterIP
-- The svc create virtual IP inside the cluster to enable communication between differetn svc (like frontend and backend)
+- The svc create virtual IP inside the cluster to enable communication between differet svc (like frontend and backend)
 
 ## LoadBalancer
-- It provsions a LB in supported  cloud service provider
+- It provisions a LB in supported  cloud service provider
