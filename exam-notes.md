@@ -78,3 +78,4 @@ in shell run this -->  nc -v -z -w 2 secure-service 80 -->
 - taints & tolerations are meant for the node to not accept any pod  it doesn't want (based on taint_effect) but the tolerated pod can be placed to different node
 - nodeSelector --> specify simple node label
 - nodeName --> specify the nodeName directly
+- If any of the init containers failed to complete the pod is restarted till all of them complete
