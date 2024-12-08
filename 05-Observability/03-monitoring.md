@@ -1,4 +1,4 @@
 - Heapster(Deprecated) VS metric server
 - metric server is In-Mem monitoring solution --> so metrics are not stored on the disk so you can't see historical performance data
 - cAdvisor on nodes that collects pod data
-- Enable metrics-server then you can use k top node and k top pod to view node and pod data for cpu and mem
+- Enable metrics-server then you can use `k top node` and `k top pod` to view node and pod data for cpu and mem

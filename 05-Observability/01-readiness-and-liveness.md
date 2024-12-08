@@ -1,6 +1,6 @@
 ## Readiness Probe
 - Pod Status (Pending -> Creating -> Running -> Terminated)
-- Pod Conditions --> complemetns Status , array of true and false
+- Pod Conditions --> complemetness Status , array of true and false
   - PodScheduled
   - Initialized
   - ContainerReady
@@ -49,4 +49,5 @@ readinessProbe:
 
 ## Liveness Probe
 - test if application is healthy
-- 
+- Problem : if container crashes --> k8s will restart it BUT what if the app is working but it has bug that makes it not able to serve requests ?
+- so add livenessProbe to test specific endpoint periodically and if it fails --> app is Unhelathy --> k8s destroys and recreates the app

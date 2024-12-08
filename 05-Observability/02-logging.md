@@ -1,4 +1,4 @@
 - get logs,-f arg is to stream live
 - k logs pod_name -f
 - if pod with multiple containers, it's required to speciy te contianer name
-- k logs pod_name container_name -f
+- k logs pod_name -c container_name -f
