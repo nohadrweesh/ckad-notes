@@ -79,3 +79,7 @@ in shell run this -->  nc -v -z -w 2 secure-service 80 -->
 - nodeSelector --> specify simple node label
 - nodeName --> specify the nodeName directly
 - If any of the init containers failed to complete the pod is restarted till all of them complete
+- RollingUpdate is the default strategy, use --record flag when update deploy to record event (Change cause is added as annotation -> kubernetes.io/change-cause
+- maxUnavailable --> how many pods can be down in updating deployment)
+- maxSurge --> how many pods can we go above num of pods specified in replica
+- Pod has restartPolicy set to Always by default
