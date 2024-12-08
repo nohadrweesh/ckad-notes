@@ -1,4 +1,4 @@
-- Scheduler checks the available nodes and chosses one with sufficient cpu and mem, if no node has sufficient cpu and mem, pod will continue in Pending state
+- Scheduler checks the available nodes and chooses one with sufficient cpu and mem, if no node has sufficient cpu and mem, pod will continue in Pending state
 
 ```
         apiVersion: v1
@@ -24,7 +24,7 @@
 - if container tries to use more cpu than its limit --> it will be throtteled (continue with its limit)
 - if container tries to use more mem than its limit --> it will be killed with OOM (out Of mem)
 - If pod has mem and needs more than its limit , we need to kill it to retrieve the mem assigned
-- Setting Requests, No LIMITS is best for real case scanarios
+- Setting Requests, No LIMITS --> is best for real case scanarios
 
 ## LimitRange
 - at namespace level

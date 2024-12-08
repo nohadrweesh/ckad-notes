@@ -1,3 +1,5 @@
+## ConfigMap
+- A way to handle configuration data outside of the pod (instead of env vars injected)
 - Create Configmap then inject into Pod
 - whole confgigMap envFrom
 - k create configmap cm --from-literal=key1=value1 --from-literal=key1=value1
@@ -50,7 +52,7 @@ data:
                 - name: nginx
                   image: nginx
                   env:
-                    - name:APP_COLOR
+                    - name: APP_COLOR
                       valueFrom:
                         configMapKeyRef:
                             name: app-config
@@ -69,6 +71,9 @@ data:
             containers:
                 - name: nginx
                   image: nginx
+                  volumeMounts
+                    - name: app-config-map-volume
+                      mountPath: /config
             volumes:
                 - name: app-config-map-volume
                   configMap:
@@ -76,5 +81,15 @@ data:
                   
             
     ```
-        
-    
+- mounting a volume --> creates a file for each key and we can specify which keys exactly we need files for using items(so we can exclude config keys we don't want)   
+"""
+volumes:
+    - name: app-config-map-volume
+      configMap:
+        name: app-config
+        items:
+         - key: "APP_COLOR"
+           path: "color.env" 
+"""  
+
+  

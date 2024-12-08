@@ -23,3 +23,4 @@
             - name: nginx
               image: nginx
 ```
+- Pod may be placed on nodes that matches its tolerations(key,value,effect)

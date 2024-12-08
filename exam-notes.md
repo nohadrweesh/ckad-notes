@@ -71,3 +71,10 @@ in shell run this -->  nc -v -z -w 2 secure-service 80 -->
 - creating apod --expose --> creates clusterip svc
 - replicaset vs replicationcontroller(older)
 - rs --> if changed the image need to delete the pods or rc to be affected
+- in docker CMD vs Entrypoint --> we run cmd + entrypoint, override cmd directly and override entrypoint with --entrypoint flag
+- in k8s --> command is for entrypoint (whole commnad override) ,args is for cmd(passing args to the docker command)
+- securityContext at both pod level and container level,capabilities only supported at container level, container level overide pod level
+- resources (requests and limits) , LimitRange, ResourceQuota
+- taints & tolerations are meant for the node to not accept any pod  it doesn't want (based on taint_effect) but the tolerated pod can be placed to different node
+- nodeSelector --> specify simple node label
+- nodeName --> specify the nodeName directly
