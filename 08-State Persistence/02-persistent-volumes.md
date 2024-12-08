@@ -1,6 +1,6 @@
 ## Problem with Volumes
-- We comfigure volume and its configuration pod definitipon file
-- In large env we aill have multiple pods and multiple volumes --> we need to control volumes centrally (not related to pods)
+- We configure volume and its configuration in pod definition file
+- In large env we will have multiple pods and multiple volumes --> we need to control volumes centrally (not related to pods)
 - We want Adminstrator to create a large pool of storages and users then can use it --> PVC
 
 ## PersistentVolume
@@ -22,7 +22,7 @@ spec:
 
 ```
 - accessMode --> how the volume is mounted on host
-- capacity.storage --> reserved for this volume
+- capacity.storage --> reserved for its volume
 - volume type --> like hostPath(this type not recommend in prod) or awsElasticBlockStore
 
 ## Persitent Volume Claim
@@ -44,10 +44,11 @@ spec:
 ```
 
 - pvc state: Pending --> Bound
-- When PVC is deleted , what happens to the attached PV? tis depends on the policy persistentVolumeReclaimPolicy in the PV defintion
+- When PVC is deleted , what happens to the attached PV? this depends on the policy persistentVolumeReclaimPolicy in the PV defintion
 persistentVolumeReclaimPolicy: Retain | Delete | Recycle
-    - Retain : it exist till admin del it
-    - Recycle: data is scrubbed(deleted) but the PV is availble to be bound again
+    - Retain : pv is in released state and can't be bound to a new PV ,it exist till admin del it
+    - Recycle (Deprecated): data is scrubbed(deleted) but the PV is available to be bound again
+    - Delete : The physical storage resource is deleted along with the PV when the PVC is deleted
 
 ## Using PVC in pod
 ```

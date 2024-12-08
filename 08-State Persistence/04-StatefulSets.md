@@ -15,7 +15,7 @@
   - for rest of steps:we need to identify one pod to be master and others to be slaves (need static names)
 - Solution StatefulSets:
   - It creates pod in sequentailly order (first pods needs to be created and running then the other is created) --> Fixes step 1,4
-  - It assigns unique original index to each pod (starting from 0,1,...) so no random names(which exist in deployments), it keeps sticky identy for pods even if pod is destroyed and recreated --> Fixes other steps
+  - It assigns unique original index to each pod (starting from 0,1,...) so no random names(which exist in deployments), it keeps sticky identity for pods even if pod is destroyed and recreated --> Fixes other steps
 
 - SO, we need statefulSets if app needs:
   - to come up in particaular order

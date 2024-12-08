@@ -1,6 +1,6 @@
 ## PersistentVolume
 - If I have PV for Google Disc , so anytime I deploy my app ,I need to create this disc first and this happens each time (Static provisioning of volumes)
-- With storage classes I can define a provisoner such as google storage that can automatically provision storage on google and attach that to Pods when claim is made (Dynamic provisioning of volumes)
+- With storage classes I can define a provisioner such as google storage that can automatically provision storage on google and attach that to Pods when claim is made (Dynamic provisioning of volumes)
 - This dynamically creates a PV BUT you don't have to create it
 ```
 apiVersion: storage.k8s.io/v1
@@ -47,6 +47,7 @@ volumeBindingMode: Immediate | waitForFirstConsumer
 - The volume binding occurs immediately after the PVC is created.
 - Suitable for storage backends that can provision volumes quickly or where topology constraints (like node affinity) are not critical.
 - The scheduler binds the PVC to a Persistent Volume (PV) right away, without waiting for the pod scheduling to occur. This can be useful for storage systems that support dynamic provisioning and have sufficient capacity available at all times.
+  
 2- WaitForFirstConsumer
 - The volume binding is delayed until a pod using the PVC is scheduled.
 - This mode helps with better placement of volumes in terms of topology constraints, such as node affinity or zone affinity.

@@ -23,13 +23,13 @@ spec:
 ## Volume types:
 1- hostPath --> creates the directory directly on host(node) but for multiple node cluster this is not recommended (unless you configure external replicated cluster storage solution) as the volume directory won't be the same on all nodes
 
-2- emptyDir --> files will exist on host as long as the pos is running in the node, once pod deletedted, files will get deleted too
+2- emptyDir --> files will exist on host as long as the pod is running in the node, once pod deleted, files will get deleted too
 
 3- Other types like (NFS ,GlusterFS,AWS ebs,Azure disk, GCP Disc solutions)
 ```
 volumes:
     - name: aws-volume
-        awsElasticBlockStore:
+      awsElasticBlockStore:
             volumeID: <volume-id>
             fsType: ext4
 ```

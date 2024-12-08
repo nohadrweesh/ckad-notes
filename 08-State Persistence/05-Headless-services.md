@@ -1,7 +1,7 @@
 # Normal SVC VS Headless SVC
 - Normal SVC : gets ClusterIP(10.96.5.1) assigned and a DNS(mysql.default.svc.cluster.local)
 - In the previous MySQL example , it's okay to serve read from the svc endpoint (that could be frowarded to any slave or to master) but writes can only be served from master (to replicate to other slaves)
-- So we need to reach master pod directly (not via IP as it changes) so we need a svc that deosn't load balance requests but gives us a DNS record
+- So we need to reach master pod directly (not via IP as it changes) so we need a svc that doesn't load balance requests but gives us a DNS record
 - SO Headless SVC doesn't load balance like nomral SVCs but it just creates DNS records
 
 # Headless Service
@@ -9,11 +9,11 @@
   - in svc yaml set `clusterIP: None`
 - used for direct communication between pods 
   - Direct pod access instead of accessing a single IP that load balances between them
-  - Useful for Stateful app in which I need to know the excact pod I'm interacting with (like master, slave-1 in mysql example)
+  - Useful for Stateful app in which I need to know the exact pod I'm interacting with (like master, slave-1 in mysql example)
 - can also be used for providing DNS records for individual StatefulSet pods
-  - when healess svc is created K8s creates A record or AAAA record for each pod that matches svc selector
+  - when headless svc is created K8s creates A record or AAAA record for each pod that matches svc selector
 
-- record would be as follows: pod_name-{index}.healess_service_name.namespace.svc.cluster.local , like
+- record would be as follows: pod_name-{index}.headless_service_name.namespace.svc.cluster.local , like
 ```
 my-app-0.my-headless-service.default.svc.cluster.local
 my-app-1.my-headless-service.default.svc.cluster.local

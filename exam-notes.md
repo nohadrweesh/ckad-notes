@@ -86,3 +86,9 @@ in shell run this -->  nc -v -z -w 2 secure-service 80 -->
 - NetPol : -
   - if I have multiple records in the `from` array --> it works as OR operation 
   - in the from array `element`(like first one) whcih has pod and ns selctor it works as AND operation , both should be met
+- hostPath --> creates the directory directly on host
+- emptyDir --> files will exist on host as long as the pod is running in the node, once pod deleted, files will get deleted too
+- can't change the pvc accessmodes after pvc is created (need to del and recreate)
+- Headless SVC doesn't load balance like nomral SVCs but it just creates DNS records
+- Headless SVC doesn't use default Cluster Ip address, Unlike a regular Kubernetes service, a headless service does not get assigned a cluster IP
+- Adding subdomain and hostname in Pod defintion --> creates headless svc, the specfied subdomain is the headless svc name that is created before the pod
