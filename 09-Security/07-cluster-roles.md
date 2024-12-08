@@ -1,6 +1,6 @@
 - Some resources are namesapced like pods, deploy,rc, roles and rolebinding
-- Others are cluster-scoped like nodes, pv,pvc,namespaces,clusterrole and clusterrolebindings
-- Clusterroles are used to authorize usrs to cluster-based resources
+- Others are cluster-scoped like nodes, pv,pvc(could be namespaced),namespaces,clusterrole and clusterrolebindings
+- Clusterroles are used to authorize users to cluster-based resources
 ```
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -12,7 +12,7 @@ rules:
   verbs: ["create","list","get"]
 
 ```
-- Aoosciate User to ClusterRole
+- Associate User to ClusterRole
 ```
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -34,6 +34,6 @@ roleRef:
 - k auth can-i list nodes --as michelle
 
 
-- k api-resources ==? gets the resources names,api versions wether namespaced or not 
+- k api-resources --> gets the resources names,api versions wether namespaced or not 
 - k create clusterrole storage-admin --resource=persistentvolumes,storageclasses --verb=*
 - k create clusterrolebinding michelle-storage-admin  --user=michelle --clusterrole=storage-admin

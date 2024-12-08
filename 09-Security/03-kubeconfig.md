@@ -59,4 +59,4 @@ users:
 - Set kubeconfig and get the current context we will need also to specify that we need the current context of this config
   - kubectl config --kubeconfig=/root/my-kube-config use-context research
   - kubectl config --kubeconfig=/root/my-kube-config current-context
-  - We can set our new file as the default config file cp my-kube-config $HOME/.kube/config
+  - We can set our new file as the default config file `cp my-kube-config $HOME/.kube/config`

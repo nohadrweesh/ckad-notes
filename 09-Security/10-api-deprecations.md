@@ -1,4 +1,4 @@
-- An api group can have multiple versions but why? and when can I remove a older version that's no longer required? --> API deprecation policy
+- An api group can have multiple versions but why? and when can I remove an older version that's no longer required? --> API deprecation policy
 - Example: we're contributing to k8s api by adding this code
   - apis --> kodecloud.com/v1alpha1/course
                                    /webinar
@@ -96,9 +96,9 @@ x+9        v1                                                   v2alpha1
 ## API Deprecation Policy Rules:
 1. API elements may only be removed by incrementing the version of api group
 2. API objects must be able to round-trip between API versions in a given release without information loss with the exception of whole REST resources that don't exist in some versions
-3. An API version in a given track may nobe deprecated until a new API version at lease as stable is released
+3. An API version in a given track may not be deprecated until a new API version at least as stable is released
 4. a. Other than the most recent API versions in each track ,older API versions must be supported after their announced deprecations for a duration of  no less than:
       - GA: 12 months or 3 releases (whichever longer)
       - Beta: 9 months or 3 releases (whichever longer)
       - Alpha: 0 releases
-   b. The `prefered` API version and `storage version`  for a given group may not advance until after a release has been made that supports bothe new and previous versions
+   b. The `prefered` API version and `storage version`  for a given group may not advance until after a release has been made that supports both new and previous versions

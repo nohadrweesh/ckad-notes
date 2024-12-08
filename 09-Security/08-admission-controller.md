@@ -5,13 +5,13 @@
 - When request hits apiServer, first it goes through authentication process(usually through certificates)
 - As this is done through kubectl --> so we have kubeconfig and authentication process is responsible for idnetifying the user who is sending the request
   `Kubectl ---> Authentication ---> Create Pod`
-- Then it goes through authorization process,mostly useing role-based access control(rbac)
+- Then it goes through authorization process,mostly using role-based access control(rbac)
    `Kubectl ---> Authentication ---> Authorization ---> Create Pod`
 
-- So Authorization using RBAC controls wether to create/update/list/delete resouces or even contorl specific resource names BUT all at K8s api level
+- So Authorization using RBAC controls wether to create/update/list/delete resouces or even control specific resource names BUT all at K8s api level
 - But if we want to create more like some image names control(specific hub) or specific capabilities, or enforce some metadata ---> Need for AdmissionControls
   `Kubectl ---> Authentication ---> Authorization ---> Admission Control ---> Create Pod`
-- Admission Control --> help in creating better security measures and can evenc change the request itself like;
+- Admission Control --> help in creating better security measures and can even change the request itself like;
   - AlwayPullImage
   - EventRateLimit
   - NamespaceExists (deny requests if ns is not created) VS NamespaceAutoProvsion (creates ns if not exist)
@@ -78,13 +78,13 @@ default, kube-system and kube-public cannot be deleted.
 - Deploy AmdissionControl server with our own code and logic
   - could be in any lang but must have (POST validate and mutate apis)
 - Configure the webhook on k8s by creating a webhook configuration object
-  - could run it somewhere or containerize and run it in k8s as a deployment withsvc
+  - could run it somewhere or containerize and run it in k8s as a deployment with svc
   - configure the cluster to reach out to the server to validate or mutate the requests
     """
     apiVersion: admissionregistration.k8s.io/v1
     kind: ValidatingWebhookConfiguration ## or could be MutatingWebhookConfiguration
     metadata:
-        name: "pod-policy.example.com
+        name: "pod-policy.example.com"
     webhooks:
     - name:
       clientConfig:

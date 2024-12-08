@@ -92,3 +92,4 @@ in shell run this -->  nc -v -z -w 2 secure-service 80 -->
 - Headless SVC doesn't load balance like nomral SVCs but it just creates DNS records
 - Headless SVC doesn't use default Cluster Ip address, Unlike a regular Kubernetes service, a headless service does not get assigned a cluster IP
 - Adding subdomain and hostname in Pod defintion --> creates headless svc, the specfied subdomain is the headless svc name that is created before the pod
+- Kubeconfig context has optional namespace
