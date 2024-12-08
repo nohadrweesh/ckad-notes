@@ -82,7 +82,7 @@ data:
             
     ```
 - mounting a volume --> creates a file for each key and we can specify which keys exactly we need files for using items(so we can exclude config keys we don't want)   
-"""
+```
 volumes:
     - name: app-config-map-volume
       configMap:
@@ -90,6 +90,6 @@ volumes:
         items:
          - key: "APP_COLOR"
            path: "color.env" 
-"""  
+```  
 
   

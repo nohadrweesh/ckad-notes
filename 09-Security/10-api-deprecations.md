@@ -3,48 +3,48 @@
   - apis --> kodecloud.com/v1alpha1/course
                                    /webinar
 webinar object be like
-"""
+```
 apiVersion: kodecloud.com/v1alpha1
 kind: webinar
 metadata:
     name: ckad
 spec
-"""
+```
 - webinar object didn't go well ,can we remove it directly form our code? NO (check rule #1) --> so we release a new version with the course only
 apis --> kodecloud.com/v1alpha1/course
                                /webinar
                       /v1alpha2/course
-"""                      
+```                      
 apiVersion: kodecloud.com/v1alpha1
 kind: Course
 metadata:
     name: ckad
 spec
-"""
+```
 
-"""                      
+```                      
 apiVersion: kodecloud.com/v1alpha2
 kind: Course
 metadata:
     name: ckad
 spec
-"""
+```
 - so old objects will remain in DB 
 - SO we still can be using v1apha1 but objects will be converted internally to v1apha2 --> preferred and stored versions are v1apha2
 - As in rule 2 course version v1alpha1 could be converted to v1alpha2 and back to v1alpha1 without any info loss
 
-"""                      
+```                      
 apiVersion: kodecloud.com/v1alpha1
 kind: Course
 metadata:
     name: ckad
 spec:
     type: video
-"""
+```
 |
 |
 |
-"""                      
+```                      
 apiVersion: kodecloud.com/v1alpha2
 kind: Course
 metadata:
@@ -52,11 +52,11 @@ metadata:
 spec:
     type: video
     duration: ##not in v1
-"""
+```
 |
 |
 |
-"""                      
+```                      
 apiVersion: kodecloud.com/v1alpha1
 kind: Course
 metadata:
@@ -64,7 +64,7 @@ metadata:
 spec:
     type: video
     duration:
-"""
+```
 
 - Must mention about deprecation in release notes 
 - Timline of an example api

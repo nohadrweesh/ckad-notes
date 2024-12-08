@@ -26,7 +26,7 @@ Persistence	Does not persist with pod identity	Persists with pod identity
 hostPath vs emptyDir
 
 - cancreate multiple items in same file like
-"""
+```
 apiVersion: v1
 kind: List
 items:
@@ -50,7 +50,7 @@ items:
         storage: 1Gi
       hostPath:
         path: /redis02
-"""
+```
 - Service : mainly selector(dict not array) and ports
 
 

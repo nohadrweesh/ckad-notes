@@ -27,10 +27,10 @@ spec:
 
 - k create deployment deployment_name --image image_name --replicas 3
 - could add strategy to the spec
-  """
+  ```
   startegy:
     type: RollingUpdate
     rollingUpdate:
         maxUnavailable: 1
         maxSurge: 2
-  """
+  ```

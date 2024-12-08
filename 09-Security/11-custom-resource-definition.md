@@ -7,7 +7,7 @@
 
 ## Custom Resource
 - want to create Object with type FlightTicket like
-"""
+```
 apiVersion: flights.com/v1
 kind: FlightTicket
 metadata:
@@ -16,14 +16,14 @@ spec:
     from: Cairo
     to: London
     number: 2
-"""
+```
 - what we need to is:
   - to create the FlightTicket resources in etcd and can use commnads like k get flightticket
   - make some logic like make api calls to book-tickets.com 
 - The scond thing needs a Controller to `monitor` etcd and based on it `change` the actual api calls
 - The first thing can be achieved by creating custom resource definition(CRD)
 
-"""
+```
 apiVersions: apiextentions.k8s.io
 kind: CustomResourceDefintion
 metadata:
@@ -52,7 +52,7 @@ spec:
                     type: number
                     minimum: 1
                     maximum: 10
-"""
+```
 - create this crd --> k apply -f crd-flight.yaml
 
 

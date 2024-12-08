@@ -80,7 +80,7 @@ default, kube-system and kube-public cannot be deleted.
 - Configure the webhook on k8s by creating a webhook configuration object
   - could run it somewhere or containerize and run it in k8s as a deployment with svc
   - configure the cluster to reach out to the server to validate or mutate the requests
-    """
+    ```
     apiVersion: admissionregistration.k8s.io/v1
     kind: ValidatingWebhookConfiguration ## or could be MutatingWebhookConfiguration
     metadata:
@@ -100,4 +100,4 @@ default, kube-system and kube-public cannot be deleted.
         resources: ["pods"]
         scope: "Namespaced"
 
-    """
+    ```
