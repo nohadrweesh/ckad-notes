@@ -51,7 +51,7 @@ spec:
 - By default k8s allows all pods to call each other but wheneever we create networkpolicy and assosiate it with specific pod so only the allowed traffic in policy can be routed
 - namespaceSelector --> used to control from which ns the pod we select
 - if I have multiple records in the `from` array --> it works as OR operation 
-- in the from array `element`(like first one) whcih has pod and ns selctor it works as AND operation , both should be met
+- in the from array `element`(like first one) which has pod and ns selctor it works as AND operation , both should be met
 
 
 ## General Note
